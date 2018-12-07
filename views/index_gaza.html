@@ -1,0 +1,226 @@
+{% extends 'index.html' %} 
+
+{% block css %}
+
+	<style>
+        section#eternities .modal-body p {
+            text-align: left;
+            padding: 18px;
+        }
+
+        .form-login .input-group-addon {
+            display:none;
+        }
+
+        @media(min-width:467px) {
+            .form-login .input-group-addon {
+                display:inline;
+            }
+        }
+
+        /* iframe */
+        @media(min-width:218px) {
+            
+        }
+
+        @media(min-width:388px) {
+            
+        }
+
+	</style>
+
+{% endblock %}
+
+{% block js %}
+    <script>
+        var BaseHome = this.BaseHome = {
+            logout: function() {
+                $.post( "api/accounts/logout/",
+                        { },
+                        function(response) {
+                            alert(response);
+                            window.location.reload(true);
+                        }
+                );
+            }
+        };
+
+    </script>
+{% endblock %}
+
+{% block header_style %}style='background-image: url("{{entity.image}}") no-repeat;'{% endblock %}
+
+{% block header_msg %}
+    <h1 class="mb-5">End Gaza attrition</h1>
+    <p>
+        Gaza continues to receive illegal weapons and continues
+        a dangerous game of deploying them.  
+    </p>
+    <button type="button" class="btn btn-default" data-dismiss="modal" style="background: #fff;">Contact your government officials</button>
+{% endblock %}
+
+{% block content %}
+
+    <br/><br/>
+
+    <section id="eternities" class="container content-section text-left">
+        
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">End corruption in Venezuela</h4>
+            </div>
+            <div class="row modal-body">
+
+                <p style='font-size:.9em;'>
+                    Gaza continues a war of tremendous attrition
+                    with so many munitions being delivered its 
+                    almost as if the land's corruption is spreading
+                    daily.
+                    
+                    There are 50,000 people suffering east of the Gaza Strip because of rocket attacks.
+                    
+                    
+                    
+                    This is probably the story of the century. <br/><br/>
+                    Much of the corruption in Latin America stems from Hitler's secret mob protecting his identity.  Over 50,000 Italians immigrated to Venezuela since 2015 and now the entire country has collapsed: https://www.datosmacro.com/demografia/migracion/inmigracion/venezuela?anio=2010#geo.  
+                    <br/><br/>
+                    Hitler's presumed location is in Venezuela with his closest contacts in countries like Columbia and Argentina (he may have moved).  This site aims to try and find him and save Latin America, end drug wars, end corruption and end stolen identitites.  Some of the stolen gold from the 40s is still sold in flea markets throughout latin america.  Gold in flea markets?  It is the same gold that was stolen, melted down and used to acquire houses for pretty bad people.  
+                    <br/><br/>
+                    The earliest corruption in Argentina after World War II stems from Hitler's own mob kidnapping people in order to obtain documents like Passports and Citizenship so that Hitler's close circle could hide while infiltrating and destroying entire countries as he headed to different parts of latin america.  His darkest connections still work low-level jobs in Latin America while receiving billions in gold stolen during the 40s. Drug wars in Mexico and Columbia, kidnappings in Argentina, much of it stems from  massive influx of Italians (over 50,000 moved to Venezuela since 2015 before it collapsed: https://www.datosmacro.com/demografia/migracion/inmigracion/venezuela?anio=2010#geo). 
+                    <br/><br/>
+                    There are people in Hitler's original circles who take low level jobs at police stations monitoring emergency calls, so it is important to contact Government officials at higher-level government offices to ensure that people with these low level jobs, especially those checking passports and desk-level police who answer emergency calls are removed from their corrupt positions. 
+                    <br/><br/>
+                    If you speak Spanish, contact higher-level government agencies by phone and warn them about Hitler's corruption and the corruption in Venezuela. Once Hitler is captured, Latin America shall stand secure and corruption there shall end.
+                    <br/><br/>
+                    Very important: Requesting anonymity as I was nearly attacked in my hotel room.  You might get a medal for this story.
+                    <br/><br/>
+                    Immigration history in Venezuela, since 2015:
+                    <a href='https://s15.postimg.cc/9lxi79w2h/venezuala_imigration.png?dl=1'>https://www.datosmacro.com/demografia/migracion/inmigracion/venezuela?anio=2010#geo</a>
+                    <br/><br/>
+
+                    <img src='https://s15.postimg.cc/fa3sykstn/venezuala_imigration_72yahvwashavayana.png'/><br/>
+
+
+                    
+                </p>
+
+            </div>
+            <div class="modal-footer">
+
+                {% if request.user.is_authenticated %}
+                <div class="dropdown" style='display:inline;'>
+
+                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <i class='glyphicon glyphicon-eye-close'></i> Friends only
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="#"><i class='glyphicon glyphicon-eye-close'></i> Friends only</a></li>
+                    <li><a href="#"><i class='glyphicon glyphicon-eye-open'></i> Web</a></li>
+                  </ul>
+                </div>
+
+                <button type="button" class="btn btn-info" data-dismiss="modal">Logout</button>
+                {% else %}
+                    <button type="button" class="btn btn-info" data-dismiss="modal">Spread this message &#x2764;</button>
+                {% endif %}
+            </div>
+        </div>
+
+        <br/><br/>
+
+        {% for eternity in eternities %}
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">{{eternity.title}}</h4>
+                </div>
+                <div class="row modal-body text-left">
+                    
+                    {% if eternity.message %}
+                    <p>
+                        {{eternity.message|safe}}
+                    </p>
+                    {% endif %}
+                    
+                </div>
+                <div class="modal-footer">
+
+                    {% if request.user.is_authenticated %}
+                    <div class="dropdown" style='display:inline;'>
+
+                      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        <i class='glyphicon glyphicon-eye-close'></i> Friends only</a>
+                        <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="#"><i class='glyphicon glyphicon-eye-close'></i> Friends only</a></li>
+                        <li><a href="#"><i class='glyphicon glyphicon-eye-open'></i> Web</a></li>
+                      </ul>
+                    </div>
+
+                    <button type="button" class="btn btn-info" data-dismiss="modal">Logout</button>
+                    {% else %}
+                        <button type="button" class="btn btn-info" data-dismiss="modal">Spread love &#x2764;</button>
+                    {% endif %}
+                </div>
+            </div>
+            <br/><br/>
+        {% endfor %}
+    </section>
+    
+    {% if settings.ALLOW_LOGIN %}
+    {% if not settings.HTML_ONLY %}
+    <!-- Login or rogister Section -->
+    <section id="login" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Login or Register</h2>
+                <p>
+                    <button data-toggle='#modal-login-register' class="btn btn-default modal-activate"><i class="glyphicon glyphicon-user"></i> Login/register</button>
+                </p>
+
+            </div>
+        </div>
+    </section>
+    {% endif %}
+    {% endif %}
+    
+    {#
+    <!--  Section -->
+    <section class="masthead content-section text-center">
+        <div class="">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                </div>
+            </div>
+        </div>
+    </section>
+    #}
+
+    <!-- Contact Section -->
+    <section id="contact" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Contact</h2>
+                <p><a href="mailto:{{settings.EMAIL}}">{{settings.EMAIL}}</a>
+                </p>
+                <!--
+                <ul class="list-inline banner-social-buttons">
+                    <li></li>
+                </ul> -->
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block modal %}
+
+    {% include "modals/modal_login.html" %}
+    {% include "modals/modal_record.html" %}
+
+{% endblock %}

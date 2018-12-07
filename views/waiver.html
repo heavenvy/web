@@ -1,0 +1,230 @@
+{% extends 'index.html' %} 
+
+{% block css %}
+
+	<style>
+		section#shiurs .list-group-item {
+			text-align: left;
+		}
+        
+        section#eternities .modal-body p {
+            text-align: left;
+            padding: 18px;
+        }
+
+        .form-login .input-group-addon {
+            display:none;
+        }
+
+        @media(min-width:467px) {
+            .form-login .input-group-addon {
+                display:inline;
+            }
+        }
+
+        /* iframe */
+        @media(min-width:218px) {
+            
+        }
+
+        @media(min-width:388px) {
+            
+        }
+
+	</style>
+
+{% endblock %}
+
+{% block js %}
+    <script>
+        var BaseHome = this.BaseHome = {
+            logout: function() {
+                $.post( "api/accounts/logout/",
+                        { },
+                        function(response) {
+                            alert(response);
+                            window.location.reload(true);
+                        }
+                );
+            }
+        };
+
+    </script>
+{% endblock %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+
+    <section id="eternities" class="container content-section text-center">
+        
+        <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">In the beginning</h4>
+                </div>
+                <div class="row modal-body">
+                    
+                    <p>
+                    
+                    This is a collective of ideas brough forth by one righteous person living in a distant land who attempts daily to make
+                    the world better.  He lives in places that people probably wouldn't want to live, but he does so to make worldwide peace.
+                    His name is with respect, admiration, and love recorded in books throughout the ages and he transmits healing and goodnesses throughout all worlds including this land we once called the New
+                    World.  His story is one of many great people who live only to improve the world and to also end evil.  His greatest accomplishment
+                    was actually sending a handful of righteous people with minds for goodness to the New World both before and after colonization began.  Thousands upon thousands of historical documents dating both hundreds and thousands of years have been written about New Worlds and many righteos people made them a reality.    
+                        
+                    <br/><br/>        
+                    {# 
+                    They pondered how do we ensure that the natives of the New World live , the natives are actually some of our own people.  Many who were gathered by transmigration to their
+                    nation and others who also crossed over to new lands by boat and today by plane.  He daily make
+                    changes and improvements in the world and he continues to make worlds, and that also means hyper-stellar worlds like those we see
+                    in movies.
+                    
+                    <br/><br/>
+
+                    In the days of the new world, he himself wasn't sure what to do, his own family was gathered to a land so far away and he was worried, what should I do?  So he tried over and over again to bring down their realities and he even made, he didn't understand exactly what the plan
+                    was but he continued to gather his people and lead them on a journey of Faith, and it was only his movements of righteousness, continuing to bring his family back to their homeland, that clarified the real goodness of what Faith in the Creator was.  There are people who arrive at such eccstacy in happiness, dripping and emitting such a high level of pure blissful joy, that their bodies and minds literally sustain much of the world and even heavenly worlds.  The happier we all are as a people and with the world peace that is so close its within arms reach, the better for the entire humanity.  When we all attempt to do goodnesses in the world, and
+                    when we keep doing goodnesses.
+                    
+                    <br/>
+                    <br/>
+                    
+                    When a sick person tries to understand the natures of illness, he attempts to fix the world himself.
+
+                    <br/>
+                    <Br/>
+                    #}  
+                    Something to really be fixed today is the connection and relationship between age old miscommunications between even the Native American people and those like you in the intelligence.  It is sad but true that the natives came to America completely free and they nearly lost their entire structure of safety, family life, because of a sort of persuit to say we want you guys to have freedoms, but don't forget we are a force and 
+                    we don't like people who do not acquiese to our
+                    people.  You saw above that when Aaron, the brother of Moses was gathered to his people, he was actually transmigrated (as written in ancient Judeo-christian histories similar to transfiguration which is like transformation also written in really ancient Judeo-christian documents).  So the New World that was known in the days of old was actually the gathering of our earliest people.  Many studies have linked the language of the Hebrews to that of the Natives in the Americas.  The tribes and even the lost tribes many people have recorded accurate accounts going back to Aaron indicating their location in the Americas and other wildernesses in other places.  If you keep searching you see a patern, a free people and even a free person, meets a foreign militia and they don't know what to do; the natives were so soveirgn and all of a sudden their own childen die by a war.  
+                        <br/><br/>
+                        So this is the message, because I really like you, when people travel to meet someone (think about the ships led by Columbus), they don't do so in any way unless they go to amicably fix things with a plan to go back where no one is harmed if they arrive and are unable to make changes that improve lives.
+                        <br/>
+                        <br/>
+                        It's a dream of mine to go and continue to fix things for the Natives.  Bill Gates is contemplating buying much land and if he does his History Homework, giving some of that land to Natives who continue to practice the old ways, even the ways of the 
+                        Spirit world that Aaron brought with him, that would be a fix for much of the world and especially the new world.
+                        <br/>
+                        <br/>
+                        I hope to maybe do this one day, to contact Bill and maybe see changes like this happen.
+                        <br/>
+                        <br/>
+                        Arvi (yes, like RV, a bit like the original natives, a migrant, trying to fix and make the world better wherever I go).
+                        <br/>
+                        <br/>
+                        With only love and hopefully a little road trip together down to the outskirts and the outsides of the reservations and maybe even 
+                        a meeting with Bill Gates to see if we can 
+                        even repair some ancient wrongs.
+                        <br/>
+                        <br/>
+                        Love and admiration only, and to an acceptance of all faiths espcially those of
+                        ancient days and a renewal of our friendship.
+                        <br/>
+                        <br/>
+                        And of course this website, I want it to be
+                        the beginning of our friendship.
+                        
+                    </p>
+
+                </div>
+                <div class="modal-footer">
+                
+                 <div class="dropdown" style='display:inline;'>
+
+                      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        <i class='glyphicon glyphicon-eye-joy'></i> Friend of Heavenvy?
+                        <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="#"><i class='glyphicon glyphicon-joy'></i> Yes</a></li>
+                        <li><a href="#"><i class='glyphicon glyphicon-joy'></i> Somewhat</a></li>
+                        <li><a href="#"><i class='glyphicon glyphicon-joy'></i> Neutral</a></li>
+                        <li><a href="#"><i class='glyphicon glyphicon-joy'></i> Not so much</a></li>
+                        <li><a href="#"><i class='glyphicon glyphicon-joy'></i> Not really</a></li>
+                      </ul>
+                    </div>
+                
+                </div>
+            </div>
+            <br/><br/>
+        
+        {% for eternity in eternities %}
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">{{eternity.title}}</h4>
+                </div>
+                <div class="row modal-body">
+                    
+                    {% if eternity.uplifting %}
+                    <p>
+                        {{eternity.uplifting}}
+                    </p>
+                    {% endif %}
+
+                    <div class="list-group">
+                        {% for sefer in sfarim %}
+                            <a href="" class="list-group-item" style="border-radius: 0 !important; border-width: 1px 0px !important;">
+
+                                {% if request.user.is_authenticated %}
+                                <span class="badge"><i title="Edit title" class='glyphicon glyphicon-pencil'></i></span>
+                                <span class="badge"><i title="Hide" class='glyphicon glyphicon-lock'></i></span>
+                                <span class="badge"><i title="Publish publicly" class='glyphicon glyphicon-bullhorn'></i> </span>
+                                <span class="badge"><i title="Deletes" class='glyphicon glyphicon-remove-sign'></i></span>
+                                {% endif %}
+                            {{sefer.title|safe}}
+                            </a>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="modal-footer">
+
+                    {% if request.user.is_authenticated %}
+                    <div class="dropdown" style='display:inline;'>
+
+                      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        <i class='glyphicon glyphicon-eye-close'></i> Friends only</a>
+                        <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="#"><i class='glyphicon glyphicon-eye-close'></i> Friends only</a></li>
+                        <li><a href="#"><i class='glyphicon glyphicon-eye-open'></i> Web</a></li>
+                      </ul>
+                    </div>
+
+                    <button type="button" class="btn btn-info" data-dismiss="modal">Logout</button>
+                    {% else %}
+                        <button type="button" class="btn btn-info" data-dismiss="modal">Spread love &#x2764;</button>
+                    {% endif %}
+                </div>
+            </div>
+            <br/><br/>
+        {% endfor %}
+    </section>
+    
+    {% if settings.ALLOW_LOGIN %}
+    {% if not settings.HTML_ONLY %}
+    <!-- Login or rogister Section -->
+    <section id="login" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Login or Register</h2>
+                <p>
+                    <button class="modal-activate" data-toggle='#modal-login-register' class="btn btn-default modal-activate"><i class="glyphicon glyphicon-user" data-toggle="#modal-waiver-liability" data-target="#modal-waiver-liability" href="#modal-waiver-liability"></i> Login/register</button>
+                    
+                </p>
+            </div>
+        </div>
+    </section>
+    {% endif %}
+    {% endif %}
+    
+    
+{% endblock %}
+
+{% block modal %}
+
+    {% include "modals/modal_login.html" %}
+    {% include "modals/modal_waiver_liability.html" %}
+
+{% endblock %}
